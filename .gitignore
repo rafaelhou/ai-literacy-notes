@@ -1,0 +1,15 @@
+# Windows
+Thumbs.db
+desktop.ini
+
+# macOS
+.DS_Store
+
+# 編輯器
+.vscode/
+.idea/
+*.swp
+
+# 部署工具
+.wrangler/
+node_modules/

@@ -401,74 +401,25 @@ details p { margin: 0; padding: 0 1.15rem 1rem; color: var(--text); }
 
 .todo input:checked + span { color: var(--muted); text-decoration: line-through; }
 
-/* ── 相簿 ─────────────────────────────── */
+/* ── 合影 ─────────────────────────────── */
 
-.gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(6.5rem, 1fr));
-  gap: .55rem;
-}
+.portrait { margin: 1.5rem 0 0; }
 
-.thumb {
-  position: relative;
-  margin: 0;
-  cursor: pointer;
-  border-radius: 7px;
-  overflow: hidden;
+.portrait img {
+  display: block;
+  width: 100%;
+  max-width: 34rem;
+  height: auto;
+  margin: 0 auto;
   border: 1px solid var(--line);
-  background: var(--surface);
-  transition: transform .12s, box-shadow .12s;
-}
-.thumb:hover { transform: translateY(-2px); box-shadow: 0 4px 14px rgba(0,0,0,.14); }
-
-.thumb img { display: block; width: 100%; height: 7.5rem; object-fit: cover; }
-
-.thumb figcaption {
-  position: absolute; left: 0; bottom: 0;
-  padding: .1rem .45rem;
-  background: rgba(0,0,0,.62);
-  color: #fff;
-  font-size: .72rem;
-  border-radius: 0 6px 0 0;
+  border-radius: var(--radius);
 }
 
-/* ── 燈箱 ─────────────────────────────── */
-
-.lightbox {
-  position: fixed; inset: 0; z-index: 100;
-  background: rgba(8,10,14,.93);
-  display: flex; align-items: center; justify-content: center;
-  padding: 2.5rem 1rem;
-}
-.lightbox[hidden] { display: none; }
-
-.lightbox img {
-  max-width: 100%; max-height: 100%;
-  object-fit: contain;
-  border-radius: 6px;
-}
-
-.lightbox button {
-  position: absolute;
-  background: rgba(255,255,255,.11);
-  border: 0; color: #fff;
-  cursor: pointer;
-  border-radius: 50%;
-  width: 2.6rem; height: 2.6rem;
-  font-size: 1.5rem; line-height: 1;
-  display: grid; place-items: center;
-  transition: background .15s;
-}
-.lightbox button:hover { background: rgba(255,255,255,.24); }
-
-.lb-close { top: 1rem; right: 1rem; }
-.lb-prev  { left: 1rem;  top: 50%; transform: translateY(-50%); }
-.lb-next  { right: 1rem; top: 50%; transform: translateY(-50%); }
-
-.lb-num {
-  position: absolute; bottom: 1rem; left: 50%; transform: translateX(-50%);
-  color: rgba(255,255,255,.72); font-size: .85rem;
-  font-variant-numeric: tabular-nums;
+.portrait figcaption {
+  margin-top: .7rem;
+  color: var(--muted);
+  font-size: .86rem;
+  text-align: center;
 }
 
 /* ── 頁尾 ─────────────────────────────── */
@@ -491,7 +442,4 @@ footer .small { font-size: .8rem; opacity: .78; }
   .hero { padding: 3.25rem 0 2.75rem; }
   section { padding-top: 2.75rem; }
   .split { grid-template-columns: 1fr; }
-  .gallery { grid-template-columns: repeat(auto-fill, minmax(5rem, 1fr)); }
-  .thumb img { height: 5.75rem; }
-  .lb-prev, .lb-next { width: 2.2rem; height: 2.2rem; font-size: 1.25rem; }
 }

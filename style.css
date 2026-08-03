@@ -166,6 +166,28 @@ blockquote {
   font-size: .95rem;
 }
 
+/* 心得長文 */
+.essay {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-left: 4px solid var(--accent);
+  border-radius: 0 var(--radius) var(--radius) 0;
+  padding: 1.6rem 1.7rem 1rem;
+}
+
+.essay p {
+  margin: 0 0 1.15rem;
+  line-height: 2;
+}
+
+.essay p:last-child {
+  margin-bottom: .6rem;
+}
+
+@media (max-width: 34rem) {
+  .essay { padding: 1.2rem 1.2rem .8rem; }
+}
+
 blockquote.pull {
   margin: 0 0 1.75rem;
   padding: 1.4rem 1.5rem;

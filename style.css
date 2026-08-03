@@ -184,6 +184,14 @@ blockquote {
   margin-bottom: .6rem;
 }
 
+/* 吐槽用的刪除線：線壓在字上，但字保持清楚可讀 */
+.essay del {
+  text-decoration: line-through;
+  text-decoration-thickness: 1.5px;
+  text-decoration-color: color-mix(in srgb, currentColor 60%, transparent);
+  text-decoration-skip-ink: none;
+}
+
 @media (max-width: 34rem) {
   .essay { padding: 1.2rem 1.2rem .8rem; }
 }

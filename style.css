@@ -491,3 +491,22 @@ footer .small { font-size: .8rem; opacity: .78; }
   section { padding-top: 2.75rem; }
   .split { grid-template-columns: 1fr; }
 }
+
+/* ── 訪問計數器 ───────────────────────── */
+
+footer .counter {
+  display: inline-flex;
+  align-items: center;
+  margin-bottom: 1rem;
+  padding: .35rem 1rem;
+  border: 1px solid var(--line);
+  border-radius: 99px;
+  background: var(--surface);
+  font-size: .85rem;
+}
+
+footer .counter strong {
+  color: var(--navy);
+  font-variant-numeric: tabular-nums;
+  margin: 0 .15rem;
+}
